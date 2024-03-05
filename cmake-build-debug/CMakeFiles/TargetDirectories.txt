@@ -1,0 +1,4 @@
+D:/mycode/cpp/projects/snake-game-v2/cmake-build-debug/CMakeFiles/lua.dir
+D:/mycode/cpp/projects/snake-game-v2/cmake-build-debug/CMakeFiles/snake_game_v2.dir
+D:/mycode/cpp/projects/snake-game-v2/cmake-build-debug/CMakeFiles/edit_cache.dir
+D:/mycode/cpp/projects/snake-game-v2/cmake-build-debug/CMakeFiles/rebuild_cache.dir
