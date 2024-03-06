@@ -7,7 +7,7 @@
 #define SIZE_X SCREEN_WIDTH / TILE_SIZE
 #define SIZE_Y SCREEN_HEIGHT / TILE_SIZE
 
-#define START_RED 50
+#define START_RED 250
 #define START_GREEN 100
 #define START_BLUE 20
 

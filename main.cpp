@@ -26,6 +26,7 @@ int main()
     
     glMatrixMode(GL_MODELVIEW);
     glLoadIdentity();
+    float time = 0;
     
     while (!glfwWindowShouldClose(window)) {
         glClear(GL_COLOR_BUFFER_BIT);
@@ -36,11 +37,12 @@ int main()
             glEnableClientState(GL_COLOR_ARRAY);
             
             glVertexPointer(3, GL_FLOAT, 0, tile.getVertices());
-            glColorPointer(4, GL_FLOAT, 0, tile.getColors());
+            glColorPointer(4, GL_FLOAT, 0, tile.getColors(time));
             glDrawArrays(GL_QUADS, 0, 4);
             
             glDisableClientState(GL_VERTEX_ARRAY);
             glDisableClientState(GL_COLOR_ARRAY);
+            time++;
         }
 
         glfwSwapBuffers(window);
