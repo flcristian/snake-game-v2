@@ -1,0 +1,26 @@
+# Ignore build output and temporary files
+/build/
+/*.o
+/*.exe
+/*.out
+
+# Ignore CMake temporary files
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+Makefile
+*.cmake
+
+# Ignore CLion IDE files
+.idea/
+
+# Ignore system files
+*.swp
+*~
+.DS_Store
+
+# You may wish to uncomment this line if your operating system generates .dSYM debugging files
+#*.dSYM/
+
+# You may wish to uncomment this line if you generate Doxygen documentation
+#/doc/html/

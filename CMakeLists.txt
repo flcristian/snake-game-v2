@@ -54,8 +54,12 @@ find_library(GLFW_LIB glfw3 ${GLFW_LIB_PATH})
 add_executable(
         snake_game_v2
         main.cpp
-        headers/gameloop.cpp
-        headers/gameloop.h
+        headers/game-loop.h
+        headers/includes.h
+        headers/definitions.h
+        headers/tiles/tile-service.h
+        headers/functions.h
+        headers/tiles/tile.h
 )
 
 target_link_libraries(snake_game_v2 ${GLEW_LIB} ${GLFW_LIB} opengl32 lua)

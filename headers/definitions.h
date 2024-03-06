@@ -1,0 +1,8 @@
+#ifndef DEFINITIONS_H
+#define DEFINITIONS_H
+
+#define SCREEN_WIDTH 1200
+#define SCREEN_HEIGHT 900
+#define TILE_SIZE 100
+
+#endif //DEFINITIONS_H
