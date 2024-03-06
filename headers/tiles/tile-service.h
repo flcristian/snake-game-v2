@@ -9,18 +9,13 @@ namespace tile_service {
     class TileService {
     private:
         std::vector<Tile>* tiles;
-        int sizeX;
-        int sizeY;
 
-        TileService(int screenWidth, int screenHeight, int tileSize) {
-            sizeX = screenWidth / tileSize;
-            sizeY = screenHeight / tileSize;
-            
-            tiles = new std::vector<Tile>(sizeX * sizeY);
+        TileService() {
+            tiles = new std::vector<Tile>(SIZE_X * SIZE_Y);
 
-            for(int i = 0; i < sizeX; i++) {
-                for(int j = 0; j < sizeY; j++) {
-                    tiles->emplace_back(i, j, tileSize);
+            for(int i = 0; i < SIZE_X; i++) {
+                for(int j = 0; j < SIZE_Y; j++) {
+                    tiles->emplace_back(i, j);
                 }
             }
         }
@@ -33,8 +28,6 @@ namespace tile_service {
         // Accessors
 
         std::vector<Tile>* getTiles() { return tiles; }
-        int getSizeX() { return sizeX; }
-        int getSizeY() { return sizeY; }
         
         // Methods
         
@@ -54,8 +47,8 @@ namespace tile_service {
         TileService& operator=(TileService const&) = delete; 
         TileService& operator=(TileService &&) = delete; 
         
-        static TileService& getInstance(int screenWidth, int screenHeight, int tileSize) {
-            static TileService instance(screenWidth, screenHeight, tileSize); // Instantiated on first use.
+        static TileService& getInstance() {
+            static TileService instance;
             return instance;
         }
     };

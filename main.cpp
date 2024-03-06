@@ -29,13 +29,18 @@ int main()
     
     while (!glfwWindowShouldClose(window)) {
         glClear(GL_COLOR_BUFFER_BIT);
-        tile_service::TileService& tileService = tile_service::TileService::getInstance(SCREEN_WIDTH, SCREEN_HEIGHT, TILE_SIZE);
+        tile_service::TileService& tileService = tile_service::TileService::getInstance();
 
         for(Tile tile : *tileService.getTiles()) {
             glEnableClientState(GL_VERTEX_ARRAY);
+            glEnableClientState(GL_COLOR_ARRAY);
+            
             glVertexPointer(3, GL_FLOAT, 0, tile.getVertices());
+            glColorPointer(4, GL_FLOAT, 0, tile.getColors());
             glDrawArrays(GL_QUADS, 0, 4);
+            
             glDisableClientState(GL_VERTEX_ARRAY);
+            glDisableClientState(GL_COLOR_ARRAY);
         }
 
         glfwSwapBuffers(window);
